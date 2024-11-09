@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <!-- Navigation (can be expanded in the future for additional views) -->
+    <nav class="bg-gray-800 text-white p-4">
+      <router-link to="/" class="mr-4">Progress Bar Mode</router-link>
+    </nav>
+
+    <!-- Main content rendered by the router -->
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+export default {};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/* Styling for the navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
+
+/* Optional: Add global styles here */
 </style>
