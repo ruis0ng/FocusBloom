@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+    <div id="app">
+        <header>
+            <h3>Thank you for participating in Rui's experiment :)</h3>
+            <nav>                            
+                <router-link to="/blankmode">Blank</router-link>       
+                <router-link to="/progress-bar">progress</router-link>         
+                <router-link to="/flower-progress">Focus Bloom🌸</router-link>          
+            </nav>
+        </header>      
+        <router-view />
+    </div>
+    </template>
+    
+    <script>
+    
+    import router from './router';
+    
+    export default {
+        name: 'App',
+        router
+    };
+    </script>
+    
+    <style scoped>
+    #app {
+        text-align: center;
+        margin-top: 20px;
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+    }
+    
+    header {
+        background-color: #42b983;
+        padding: 5px;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    nav {
+        margin-top: 5px;
+    }
+    
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    
+    nav a.router-link-active {
+        text-decoration: underline;
+    }
+    </style>
+    

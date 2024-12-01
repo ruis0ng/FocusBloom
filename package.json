@@ -1,15 +1,24 @@
 {
-  "name": "mind_bloom",
+  "name": "focus-bloom",
   "version": "0.1.0",
   "private": true,
+  "description": "A focus tracking application with visual feedback.",
+  "author": "Rui S0ng",
+  "main": "background.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "cross-env NODE_ENV=development vue-cli-service electron:serve",
+    "build": "cross-env NODE_ENV=production vue-cli-service electron:build",
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "active-win": "^8.2.1",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -17,11 +26,12 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "autoprefixer": "^10.4.20",
+    "electron": "^33.2.0",
+    "electron-devtools-installer": "^3.1.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14"
+    "path-browserify": "^1.0.1",
+    "vue-cli-plugin-electron-builder": "~2.1.1"
   },
   "eslintConfig": {
     "root": true,
