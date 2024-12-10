@@ -53,3 +53,7 @@ All icons and graphics used in Focus Bloom are sourced from free online resource
 ---
 
 Stay focused, stay blooming! 🌼
+
+For our current release, please click here:
+
+[![Releases](https://img.shields.io/github/v/release/ruis0ng/FocusBloom?label=Latest%20Release)](https://github.com/ruis0ng/FocusBloom/releases/tag/v0.1.0)
