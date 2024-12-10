@@ -56,4 +56,4 @@ Stay focused, stay blooming! 🌼
 
 For our current release, please click here:
 
-[![Releases](https://img.shields.io/github/v/release/ruis0ng/FocusBloom?label=v0.1.0)](https://github.com/ruis0ng/FocusBloom/releases)
+[![Releases](https://img.shields.io/github/v/release/ruis0ng/FocusBloom?Latest%20Release&cacheSeconds=300)](https://github.com/ruis0ng/FocusBloom/releases)
